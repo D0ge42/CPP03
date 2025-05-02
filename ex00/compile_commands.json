@@ -1,0 +1,36 @@
+[
+ {
+  "directory": "/home/doge/CPP03/ex00",
+  "arguments": [
+   "g++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-std=c++98",
+   "-Iincludes",
+   "-g",
+   "-c",
+   "srcs/main.cpp",
+   "-o",
+   "objs/main.o"
+  ],
+  "file": "srcs/main.cpp"
+ },
+ {
+  "directory": "/home/doge/CPP03/ex00",
+  "arguments": [
+   "g++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-std=c++98",
+   "-Iincludes",
+   "-g",
+   "-c",
+   "srcs/ClapTrap.cpp",
+   "-o",
+   "objs/ClapTrap.o"
+  ],
+  "file": "srcs/ClapTrap.cpp"
+ }
+]
