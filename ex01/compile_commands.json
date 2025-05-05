@@ -1,0 +1,44 @@
+[
+ {
+  "directory": "/nfs/homes/lonulli/CPP03/ex01",
+  "file": "srcs/main.cpp",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-std=c++98",
+   "-Iincludes",
+   "-c",
+   "srcs/main.cpp"
+  ]
+ },
+ {
+  "directory": "/nfs/homes/lonulli/CPP03/ex01",
+  "file": "srcs/ClapTrap.cpp",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-std=c++98",
+   "-Iincludes",
+   "-c",
+   "srcs/ClapTrap.cpp"
+  ]
+ },
+ {
+  "directory": "/nfs/homes/lonulli/CPP03/ex01",
+  "file": "srcs/ScavTrap.cpp",
+  "arguments": [
+   "c++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-std=c++98",
+   "-Iincludes",
+   "-c",
+   "srcs/ScavTrap.cpp"
+  ]
+ }
+]
