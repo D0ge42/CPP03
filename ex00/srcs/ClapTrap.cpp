@@ -38,7 +38,7 @@ void ClapTrap::attack(const std::string &target)
   else if (this->_hitPoints == 0)
     std::cout << "\033[30;43m"<< this->getName() << " is dead. Let it rest in peace." << "\033[0m" << (char)0xa;
   else if (this->_energyPoints == 0)
-    std::cout << this->getName() << " needs some rest before performing any action " << (char)0xa;
+    std::cout << "\033[033;40m" << this->getName() << " needs some rest before performing any action\033[0m" << (char)0xa;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
@@ -47,7 +47,7 @@ void ClapTrap::takeDamage(unsigned int amount)
   {
     if (subtractionUnderflow(this->_hitPoints, amount) == true)
     {
-      std::cout << "Critical hit \n";
+      std::cout << "\033[40mCritical hit\033[0m\n";
       this->_hitPoints = 0;
     }
     else
@@ -71,21 +71,14 @@ void ClapTrap::beRepaired(unsigned int amount)
       return;
     }
     std::cout << "\033[32m" <<this->getName() << " is repairing... " <<
-      "It gains: " << amount << " HP " << "spending 1 EP " << (char)0xa << this->getName() << " HPs are now " << this->_energyPoints + amount << "\033[0m" << (char)0xa;
+      "It gains: " << amount << " HP " << "spending 1 EP " << (char)0xa << this->getName() << " HPs are now " << this->_hitPoints + amount << "\033[0m" << (char)0xa;
     this->_energyPoints--;
     this->_hitPoints+=amount;
   }
   else
-    std::cout << "Not enough energy points. Let this poor guy rests." << (char)0xa;
+    std::cout << "\033[33;40mNot enough energy points. Let this poor guy rests.\033[0m" << (char)0xa;
 }
 
-// Const after function name:
-// changes type of "this" from Foo* const into const Foo* const
-// IN other words, const before a function name means that the
-// return parameters is const.
-// const after the function means that the function is part of a class
-// and can't change any member of that class.
-// Also const objects are only allowed to call these const functions.
 
 bool additionOverflow(unsigned int a,unsigned int b)
 {
@@ -96,6 +89,14 @@ bool subtractionUnderflow(unsigned int a,unsigned int b)
 {
   return b > std::numeric_limits<unsigned int>::min()+a;
 }
+
+// Const after function name:
+// changes type of "this" from Foo* const into const Foo* const
+// IN other words, const before a function name means that the
+// return parameters is const.
+// const after the function means that the function is part of a class
+// and can't change any member of that class.
+// Also const objects are only allowed to call these const functions.
 
 unsigned int ClapTrap::getEp()const
 {
