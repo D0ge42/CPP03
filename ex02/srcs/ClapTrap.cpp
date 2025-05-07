@@ -5,18 +5,18 @@
 #include <sys/types.h>
 
 ClapTrap::ClapTrap():_hitPoints(10),_energyPoints(10),_attackDamage(0) {
-  std::cout << "ClapTrap created." << (char)0xa;
+  std::cout << "\033[1;97mClapTrap created.\033[0m" << (char)0xa;
 }
 
 ClapTrap::~ClapTrap()
 {
 
-  std::cout << "ClapTrap destroyed." << (char)0xa;
+  std::cout << "\033[1;91mClapTrap: " << this->getName() <<  " destroyed.\033[0m" << (char)0xa;
 }
 
 ClapTrap::ClapTrap(std::string name):_name(name),_hitPoints(10),_energyPoints(10),_attackDamage(0)
 {
-  std::cout << "ClapTrap: " <<  this->getName() << " created and ready to smash " << (char)0xa;
+  std::cout << "\033[1;95mClapTrap: " <<  this->getName() << " created and ready to smash\033[0m" << (char)0xa;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap &ref)
@@ -32,13 +32,13 @@ void ClapTrap::attack(const std::string &target)
 {
   if (this->_energyPoints > 0 && this->_hitPoints > 0)
   {
-    std::cout << this->getName() << " attacks " << target << " causing " << this->getAd() << " points of damage ! " << (char)0xa;
+    std::cout << "\033[1;97m" << this->getName() << "\033[0m" << " attacks " << target << " causing " << this->getAd() << " points of damage ! "  << (char)0xa;
     this->_energyPoints--;
   }
   else if (this->_hitPoints == 0)
-    std::cout << this->getName() << " is dead. Let it rest in peace." << (char)0xa;
+    std::cout << "\033[1;97m" << this->getName() << "\033[0m" << " is dead. Let it rest in peace." << (char)0xa;
   else if (this->_energyPoints == 0)
-    std::cout << this->getName() << " needs some rest before performing any action" << (char)0xa;
+    std::cout << "\033[1;97m" << this->getName() << "\033[0m" << " needs some rest before performing any action" << (char)0xa;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
@@ -52,9 +52,9 @@ void ClapTrap::takeDamage(unsigned int amount)
     }
     else
       this->_hitPoints-=amount;
-    std::cout << this->getName() << " gets hit for " << amount << " damage. " << "Its hp are now: " << this->_hitPoints <<  (char)0xa;
+    std::cout <<  "\033[1;97m" << this->getName() << "\033[0m"<< " gets hit for " << amount << " damage. " << "Its hp are now: " << this->_hitPoints  << (char)0xa;
     if (this->_hitPoints == 0)
-      std::cout << this->getName() << " has died. R.I.P homie " <<  (char)0xa;
+      std::cout << "\033[1;97m" << this->getName() << "\033[0m" << " has died. R.I.P homie " <<  (char)0xa;
   }
   else
     std::cout << "Stop. " << this->getName() << " is already dead. " << (char)0xa;
@@ -70,13 +70,13 @@ void ClapTrap::beRepaired(unsigned int amount)
       std::cout << "\033[30;44m!!!POTENTIAL UNSIGNED INT OVERFLOW!!!\033[0m" << (char)0xa;
       return;
     }
-    std::cout  <<this->getName() << " is repairing... " <<
-      "It gains: " << amount << " HP " << "spending 1 EP " << (char)0xa << this->getName() << " HPs are now " << this->_hitPoints + amount  << (char)0xa;
+    std::cout  << "\033[1;97m" <<this->getName() << " \033[0mis repairing... " <<
+      "It gains: " << amount << " HP " << "spending 1 EP " << (char)0xa << "\033[1;97m" << this->getName() << " \033[0mHPs are now " << this->_hitPoints + amount  << (char)0xa;
     this->_energyPoints--;
     this->_hitPoints+=amount;
   }
   else
-    std::cout << "Not enough energy points. Let this poor guy rests." << (char)0xa;
+    std::cout << "\033[1;97m" << this->getName() <<"\033[0m: Not enough energy points. Let this poor guy rests." << (char)0xa;
 }
 
 
