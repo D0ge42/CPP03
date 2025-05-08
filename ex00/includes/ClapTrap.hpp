@@ -8,8 +8,9 @@ class ClapTrap
     unsigned int _hitPoints;
     unsigned int _energyPoints;
     unsigned int _attackDamage;
-  public:
 
+ // Orthodox canonical form
+  public:
     ClapTrap();
     ClapTrap(std::string name);
     ~ClapTrap();

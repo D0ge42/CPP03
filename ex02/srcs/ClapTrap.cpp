@@ -16,7 +16,7 @@ ClapTrap::~ClapTrap()
 
 ClapTrap::ClapTrap(std::string name):_name(name),_hitPoints(10),_energyPoints(10),_attackDamage(0)
 {
-  std::cout << "\033[1;95mClapTrap: " <<  this->getName() << " created and ready to smash\033[0m" << (char)0xa;
+  std::cout << "\033[1;95mClapTrap: \033[0m" <<  this->getName() << " created and ready to smash" << (char)0xa;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap &ref)

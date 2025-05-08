@@ -5,7 +5,7 @@
 #include <sys/types.h>
 
 ClapTrap::ClapTrap():_hitPoints(10),_energyPoints(10),_attackDamage(0) {
-  std::cout << "\033[1;97mClapTrap created.\033[0m" << (char)0xa;
+  std::cout << "\033[1;97mClapTrap created.\033[0m\n" << (char)0xa;
 }
 
 ClapTrap::~ClapTrap()
@@ -32,7 +32,7 @@ void ClapTrap::attack(const std::string &target)
 {
   if (this->_energyPoints > 0 && this->_hitPoints > 0)
   {
-    std::cout << "\033[1;97m" << this->getName() << "\033[0m" << " attacks " << target << " causing " << this->getAd() << " points of damage ! "  << (char)0xa;
+    std::cout << "\033[1;97mClapTrap: " << this->getName() << "\033[0m" << " attacks " << target << " causing " << this->getAd() << " points of damage ! "  << (char)0xa;
     this->_energyPoints--;
   }
   else if (this->_hitPoints == 0)

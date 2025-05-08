@@ -3,7 +3,7 @@
 
 ScavTrap::ScavTrap():ClapTrap()
 {
-  std::cout << "ScavTrap created.\n";
+  std::cout << "\033[1;96mScavTrap: \033[0m created.\n";
   this->_hitPoints = 100;
   this->_energyPoints = 50;
   this->_attackDamage = 20;
@@ -12,8 +12,7 @@ ScavTrap::ScavTrap():ClapTrap()
 
 ScavTrap::ScavTrap(std::string name): ClapTrap()
 {
-  std::cout << "\033[1;96mScavTrap created. It's name is " << name <<
-    "\033[0m\n";
+  std::cout << "\033[1;96mScavTrap: \033[0m" << name << "created.";
   this->_name = name;
   this->_hitPoints = 100;
   this->_energyPoints = 50;
@@ -61,5 +60,24 @@ ScavTrap::~ScavTrap()
 
 void ScavTrap::guardGate()
 {
-  std::cout << "\033[1;96mScavTrap: "  << this->getName() << "\033[0m" << " is  now in gatekeeper mode 🛡️ \n";
+  std::cout << "\033[1;96mScavTrap: "  << this->_name << "\033[0m" << " is  now in gatekeeper mode 🛡️ \n";
+}
+
+unsigned int ScavTrap::getAd() const
+{
+  return this->_attackDamage;
+}
+
+unsigned int ScavTrap::getEp() const
+{
+  return this->_energyPoints;
+}
+unsigned int ScavTrap::getHp() const
+{
+  return this->_hitPoints;
+}
+
+std::string ScavTrap::getName() const
+{
+  return this->_name;
 }

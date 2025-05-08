@@ -13,4 +13,9 @@ class FragTrap: virtual public  ClapTrap
     FragTrap&operator=(const FragTrap &ref);
 
     void highFiveGuys();
+
+    unsigned int getAd()const;
+    unsigned int getHp()const;
+    unsigned int getEp()const;
+    std::string getName()const;
 };

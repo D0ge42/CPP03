@@ -39,10 +39,31 @@ DiamondTrap::DiamondTrap(const DiamondTrap &ref):ClapTrap(ref),ScavTrap(ref),Fra
 
 DiamondTrap::~DiamondTrap()
 {
-  std::cout << "DiamondTrap: " << this->_name << " destroyed\n";
+  std::cout << "\033[1;91mDiamondTrap: " << this->_name << " destroyed \033[0m\n";
 }
 
 void DiamondTrap::whoAmI()
 {
   std::cout << "DiamondTrap: My name is " << this->_name << " and my grandfather name is " << ClapTrap::_name << std::endl;
+}
+
+unsigned int DiamondTrap::getEp()
+{
+  return this->_energyPoints;
+}
+
+
+unsigned int DiamondTrap::getAd()
+{
+  return this->_attackDamage;
+}
+
+unsigned DiamondTrap::getHp()
+{
+  return this->_hitPoints;
+}
+
+std::string DiamondTrap::getName()
+{
+  return this->_name;
 }

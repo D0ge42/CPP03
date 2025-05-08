@@ -4,7 +4,7 @@
 
 FragTrap::FragTrap():ClapTrap()
 {
-  std::cout << "FragTrap created.\n";
+  std::cout << "\033[1;93mFragTrap: \033[0mcreated.\n";
   this->_hitPoints = 100;
   this->_energyPoints = 100;
   this->_attackDamage = 30;
@@ -13,8 +13,7 @@ FragTrap::FragTrap():ClapTrap()
 
 FragTrap::FragTrap(std::string name): ClapTrap()
 {
-  std::cout << "\033[1;93mFragTrap created. It's name is " << name <<
-    "\033[0m\n";
+  std::cout << "\033[1;93mFragTrap:\033[0m " << name << " created.";
   this->_name = name;
   this->_hitPoints = 100;
   this->_energyPoints = 100;
@@ -49,4 +48,23 @@ FragTrap::~FragTrap()
 void FragTrap::highFiveGuys()
 {
   std::cout << "\033[1;93mFragTrap: " << this->getName() << "\033[0m highfive you!\n";
+}
+
+unsigned int FragTrap::getAd() const
+{
+  return this->_attackDamage;
+}
+
+unsigned int FragTrap::getEp() const
+{
+  return this->_energyPoints;
+}
+unsigned int FragTrap::getHp() const
+{
+  return this->_hitPoints;
+}
+
+std::string FragTrap::getName() const
+{
+  return this->_name;
 }
