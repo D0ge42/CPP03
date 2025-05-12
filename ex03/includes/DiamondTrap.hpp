@@ -19,5 +19,6 @@ class DiamondTrap: public ScavTrap, public FragTrap
     unsigned int getAd();
     unsigned int getHp();
     unsigned int getEp();
+    unsigned int getBaseEp();
     std::string getName();
 };

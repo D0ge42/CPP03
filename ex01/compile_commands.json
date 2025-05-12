@@ -1,53 +1,44 @@
 [
  {
-  "directory": "/home/doge/CPP03/ex01",
+  "directory": "/nfs/homes/lonulli/CPP03/ex01",
+  "file": "srcs/main.cpp",
   "arguments": [
-   "g++",
+   "c++",
    "-Wall",
    "-Wextra",
    "-Werror",
    "-std=c++98",
    "-Iincludes",
-   "-g",
    "-c",
-   "srcs/main.cpp",
-   "-o",
-   "objs/main.o"
-  ],
-  "file": "srcs/main.cpp"
+   "srcs/main.cpp"
+  ]
  },
  {
-  "directory": "/home/doge/CPP03/ex01",
+  "directory": "/nfs/homes/lonulli/CPP03/ex01",
+  "file": "srcs/ClapTrap.cpp",
   "arguments": [
-   "g++",
+   "c++",
    "-Wall",
    "-Wextra",
    "-Werror",
    "-std=c++98",
    "-Iincludes",
-   "-g",
    "-c",
-   "srcs/ClapTrap.cpp",
-   "-o",
-   "objs/ClapTrap.o"
-  ],
-  "file": "srcs/ClapTrap.cpp"
+   "srcs/ClapTrap.cpp"
+  ]
  },
  {
-  "directory": "/home/doge/CPP03/ex01",
+  "directory": "/nfs/homes/lonulli/CPP03/ex01",
+  "file": "srcs/ScavTrap.cpp",
   "arguments": [
-   "g++",
+   "c++",
    "-Wall",
    "-Wextra",
    "-Werror",
    "-std=c++98",
    "-Iincludes",
-   "-g",
    "-c",
-   "srcs/ScavTrap.cpp",
-   "-o",
-   "objs/ScavTrap.o"
-  ],
-  "file": "srcs/ScavTrap.cpp"
+   "srcs/ScavTrap.cpp"
+  ]
  }
 ]

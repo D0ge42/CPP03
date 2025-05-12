@@ -5,7 +5,7 @@
 DiamondTrap::DiamondTrap():ScavTrap(),FragTrap()
 {
   this->_hitPoints = FragTrap::_hitPoints;
-  this->_energyPoints = ScavTrap::_energyPoints;
+  this->_energyPoints = ScavTrap::_baseEp;
   this->_attackDamage = FragTrap::_attackDamage;
   std::cout << "\033[1;95mDiamondTrap: \033[0m" << this->_name << " created\n";
 }
@@ -13,7 +13,7 @@ DiamondTrap::DiamondTrap():ScavTrap(),FragTrap()
 DiamondTrap::DiamondTrap(std::string name):ClapTrap(name + "_clap_name"),ScavTrap(),FragTrap(), _name(name)
 {
   this->_hitPoints = FragTrap::_hitPoints;
-  this->_energyPoints = ScavTrap::_energyPoints;
+  this->_energyPoints = ScavTrap::_baseEp;
   this->_attackDamage = FragTrap::_attackDamage;
   std::cout << "\033[1;95mDiamondTrap: \033[0m" << this->_name << " created\n";
 }
@@ -52,6 +52,10 @@ unsigned int DiamondTrap::getEp()
   return this->_energyPoints;
 }
 
+unsigned int DiamondTrap::getBaseEp()
+{
+  return this->_baseEp;
+}
 
 unsigned int DiamondTrap::getAd()
 {

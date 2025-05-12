@@ -16,8 +16,8 @@ int main()
   std::cout << "\n\033[1;97m##### COPY CONSTRUCTOR STATS #####\033[0m\n\n";
   std::cout << "d1 stats: " << diamond1.getAd() << std::endl;
   std::cout << "d0 stats: " << diamond.getAd() << std::endl;
-  std::cout << "d1 stats: " << diamond1.getEp() << std::endl;
-  std::cout << "d0 stats: " << diamond.getEp() << std::endl;
+  std::cout << "d1 stats: " << diamond1.getBaseEp() << std::endl;
+  std::cout << "d0 stats: " << diamond.getBaseEp() << std::endl;
   std::cout << "d1 stats: " << diamond1.getName() << std::endl;
   std::cout << "d0 stats: " << diamond.getName() << std::endl;
 

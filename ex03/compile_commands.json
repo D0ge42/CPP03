@@ -1,6 +1,6 @@
 [
  {
-  "directory": "/nfs/homes/lonulli/CPP03/ex03",
+  "directory": "/nfs/homes/lonulli/CPP03push/ex03",
   "file": "srcs/main.cpp",
   "arguments": [
    "c++",
@@ -16,7 +16,7 @@
   ]
  },
  {
-  "directory": "/nfs/homes/lonulli/CPP03/ex03",
+  "directory": "/nfs/homes/lonulli/CPP03push/ex03",
   "file": "srcs/ClapTrap.cpp",
   "arguments": [
    "c++",
@@ -32,7 +32,7 @@
   ]
  },
  {
-  "directory": "/nfs/homes/lonulli/CPP03/ex03",
+  "directory": "/nfs/homes/lonulli/CPP03push/ex03",
   "file": "srcs/ScavTrap.cpp",
   "arguments": [
    "c++",
@@ -48,7 +48,7 @@
   ]
  },
  {
-  "directory": "/nfs/homes/lonulli/CPP03/ex03",
+  "directory": "/nfs/homes/lonulli/CPP03push/ex03",
   "file": "srcs/FragTrap.cpp",
   "arguments": [
    "c++",
@@ -64,7 +64,7 @@
   ]
  },
  {
-  "directory": "/nfs/homes/lonulli/CPP03/ex03",
+  "directory": "/nfs/homes/lonulli/CPP03push/ex03",
   "file": "srcs/DiamondTrap.cpp",
   "arguments": [
    "c++",

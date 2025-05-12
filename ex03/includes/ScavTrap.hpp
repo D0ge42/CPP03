@@ -4,7 +4,8 @@
 
 class ScavTrap: virtual public  ClapTrap
 {
-  private:
+  protected:
+    static const unsigned int _baseEp = 50;
   public:
     ScavTrap();
     ScavTrap(std::string name);
